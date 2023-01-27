@@ -1,0 +1,3 @@
+F:/edu/machineVisionProjects/TextureSynthesis/cmake-build-debug/CMakeFiles/test_cv.dir
+F:/edu/machineVisionProjects/TextureSynthesis/cmake-build-debug/CMakeFiles/edit_cache.dir
+F:/edu/machineVisionProjects/TextureSynthesis/cmake-build-debug/CMakeFiles/rebuild_cache.dir
