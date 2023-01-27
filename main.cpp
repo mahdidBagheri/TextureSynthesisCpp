@@ -1,16 +1,22 @@
 #include <opencv2/core/core.hpp>
 #include <opencv2/highgui/highgui.hpp>
 #include <iostream>
+#include "Synth.cpp"
 
 int main()
 {
 
     cv::Mat frame;
-    frame = cv::imread("F:\\edu\\machineVisionProjects\\TextureSynthesis\\me.jpg", cv::IMREAD_COLOR); // Read the file
+    std::string path = "F:\\edu\\machineVisionProjects\\TextureSynthesis\\texture1.jpg";
+    frame = cv::imread(path, cv::IMREAD_COLOR); // Read the file
 
-    cv::namedWindow("Window", cv::WINDOW_AUTOSIZE); // Create a window for display.
-    cv::imshow("Window", frame); // Show our image inside it.
+    Synth* synth = new Synth();
 
-    cv::waitKey(0); // Wait for a keystroke in the window
+    cv::Mat texture = synth->read_texture(path);
+    long hight = 2500;
+    long width = 2500;
+    cv::Mat siynthesis_image = synth->synth_texture(texture, width, hight);
+    //imshow("synth",siynthesis_image);
+    //waitKey(0);
     return 0;
 }
